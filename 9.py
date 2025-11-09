@@ -10,21 +10,27 @@ while 1 < num < 1000:
 
 
 # Assignment 4.2
-inches = int(input("Enter your number"))
-centimeters = inches * 2.54
-while inches >= 0:
-    print("Your number is:", centimeters)
-    if inches < 0:
-      break
+while True:
+    inches = int(input("Enter your number: "))
+    if inches >= 0:
+        centimeters = inches * 2.54
+        print("Your number is:", centimeters)
+    elif inches < 0:
+        break
+
 
 # Assignment 4.3
-largest_number = input(str("Enter your largest number"))
-smallest_number = input(str("Enter your smallest number"))
-while largest_number != "" and smallest_number != "":
-    print("Largest number: ", largest_number)
-    print("Smallest number: ", smallest_number)
-    if largest_number == "" and smallest_number == "":
-     print("Goodbye")
+list = []
+while True:
+    number = input("Enter the number: ")
+    if number != "":
+        list.append(int(number))
+        print("Number entered")
+        continue
+    if number == "":
+        print("Largest number: ", max(list))
+        print("Smallest number: ", min(list))
+        print("Goodbye")
     break
 
 
@@ -48,10 +54,11 @@ username = "python"
 password = "rules"
 attempts = 5
 while attempts > 0:
-    username = (input("Enter your username"))
-    password = (input("Enter your password"))
+    username = (input("Enter your username: "))
+    password = (input("Enter your password: "))
     if username == "python" and password == "rules":
         print("Welcome")
+        break
     else:
         attempts = attempts - 1
         print("Sorry, try again")
@@ -59,24 +66,21 @@ while attempts > 0:
         print("Access Denied")
         break
 
-
-# Assignment 4.6
-import math
+# # Assignment 4.6
 import random
 N = int(input("Enter your number"))
 A = 1
 B = 0
-while N > 0:
-    x = random.randint(-1, 1)
-    y = random.randint(-1, 1)
+count = 0
+while N > count:
+    x = random.uniform(-1, 1)
+    y = random.uniform(-1, 1)
     total = x * x + y * y
-    if total < A:
-        B = B + 1
-    elif total == A:
+    if total <= A:
         B = B + 1
     elif total > A:
-        print("The square is bigger than the circle")
         pass
+    count += 1
 
-n = 4 * total / N
-print("Pi is: ", total)
+n = 4 * B / N
+print("Pi is: ", n)
