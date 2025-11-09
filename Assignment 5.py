@@ -41,4 +41,5 @@ for command in range(5):
     enter = input("Enter your city: ")
     cities.append(enter)
 for city in cities:
-    print(cities)
+
+    print(city)
