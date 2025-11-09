@@ -15,7 +15,8 @@ while True:
     numbers = input("Enter numbers: ")
     if numbers == "":
         break
-    number_list.append(float(numbers))
+    else:
+        number_list.append(float(numbers))
 number_list.sort(reverse=True)
 print(number_list[:5])
 
