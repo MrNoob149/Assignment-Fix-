@@ -1,33 +1,33 @@
 # question 1
 
-# class Publication:
-#     def __init__(self, name: str):
-#         self.name = name
-#
-# class Book(Publication):
-#     def __init__(self, name ,author_name, page_count):
-#         super().__init__(name)
-#         self.author_name = author_name
-#         self.page_count = page_count
-#
-#     def print_information(self):
-#         print("The author of this book is ", self.author_name)
-#         print("The number of this page is ", self.page_count)
-#         print("The name of this book is", self.name)
-#
-# class Magazine(Publication):
-#     def __init__(self, name ,chief_editor):
-#         super().__init__(name)
-#         self.chief_editor = chief_editor
-#
-#     def print_information(self):
-#         print("The chief editor of this magazine is ", self.chief_editor)
-#         print("The name of this magazine is", self.name)
-#
-# book = Book("Compartment No. 6", "Rosa Liksom", 192)
-# book.print_information()
-# magazine = Magazine("Donald Duck", "Aki Hyyppä")
-# magazine.print_information()
+class Publication:
+    def __init__(self, name: str):
+        self.name = name
+
+class Book(Publication):
+    def __init__(self, name ,author_name, page_count):
+        super().__init__(name)
+        self.author_name = author_name
+        self.page_count = page_count
+
+    def print_information(self):
+        print("The author of this book is ", self.author_name)
+        print("The number of this page is ", self.page_count)
+        print("The name of this book is", self.name)
+
+class Magazine(Publication):
+    def __init__(self, name ,chief_editor):
+        super().__init__(name)
+        self.chief_editor = chief_editor
+
+    def print_information(self):
+        print("The chief editor of this magazine is ", self.chief_editor)
+        print("The name of this magazine is", self.name)
+
+book = Book("Compartment No. 6", "Rosa Liksom", 192)
+book.print_information()
+magazine = Magazine("Donald Duck", "Aki Hyyppä")
+magazine.print_information()
 
 # question 2
 class Car:
