@@ -13,7 +13,7 @@ api_key = "e14253e3588bc861f0e30accaff4ad08"
 
 city = input("Enter municipality name: ")
 
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=API_KEY"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
 
 response = requests.get(url)
