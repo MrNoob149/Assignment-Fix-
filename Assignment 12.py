@@ -22,7 +22,7 @@ data2 = response.json()
 if response.status_code == 200:
     description = data2["weather"][0]["description"]
     temp_kelvin = data2["main"]["temp"]
-    temp_celus = temp_kelvin - 273.15
+    temp_celsius = temp_kelvin - 273.15
 
     print(f"The temperature in {city} is {temp_celus:.2f} degree")
 else:
