@@ -24,6 +24,6 @@ if response.status_code == 200:
     temp_kelvin = data2["main"]["temp"]
     temp_celsius = temp_kelvin - 273.15
 
-    print(f"The temperature in {city} is {temp_celus:.2f} degree")
+    print(f"The temperature in {city} is {temp_celsius:.2f} degree")
 else:
     print("Error")
